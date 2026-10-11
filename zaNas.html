@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="mk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>За нас</title>
+
+    <link rel="stylesheet" href="css/zaNas.css">
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-dot"><i class="bx bx-world" ></i></span>
+            Патувај
+        </a>
+
+        <nav>
+            <a href="index.html">Почетна</a>
+            <a href="destinacii.html">Дестинации</a>
+            <a href="zaNas.html">За нас</a>
+            <a href="kontakt.html">Контакт</a>
+        </nav>
+
+        <!-- РЕЗЕРВИРАЈ -->
+
+        <a href="#rezervacija" class="reserve-button">
+            <strong><i class='bx bxs-calendar-event'></i></strong>
+            &nbsp; Резервирај
+        </a>
+
+    </header>
+
+
+    <!-- =====================================================
+         RESERVATION POPUP
+    ====================================================== -->
+
+   
+<!-- POP UP -->
+<div id="rezervacija" class="reservation-popup">
+     <label class="background-blur"></label>
+
+        <div class="reservation-box">
+
+            <a href="#" class="close-reservation">
+                &times;
+            </a>
+
+
+            <div class="reservation-title">
+
+                <span>✈</span>
+
+                <h2>
+                    Резервирај го твоето патување
+                </h2>
+
+                <p>
+                    Пополнете ги податоците за вашата резервација.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <!-- ИМЕ И ЛИЦА -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Име и презиме
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Вашето име и презиме"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Број на лица
+                        </label>
+
+                        <input
+                            type="number"
+                            min="1"
+                            placeholder="Број на лица"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ДЕСТИНАЦИЈА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дестинација
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Изберете дестинација
+                        </option>
+
+                        <option>Австрија</option>
+                        <option>Босна и Херцеговина</option>
+                        <option>Бразил</option>
+                        <option>Бугарија</option>
+                        <option>Германија</option>
+                        <option>Грција</option>
+                        <option>Доминиканска Република</option>
+                        <option>Египет</option>
+                        <option>Еквадор</option>
+                        <option>Исланд</option>
+                        <option>Италија</option> 
+                        <option>Јапонија</option>
+                        <option>Кенија</option>
+                        <option>Кипар</option>
+                        <option>Костарика</option>
+                        <option>Малдиви</option>
+                        <option>Малта</option>
+                        <option>Мароко</option>
+                        <option>Маврициус</option>
+                        <option>Намбија</option>
+                        <option>Непал</option>
+                        <option>Норвешка</option>
+                        <option>Перу</option>
+                        <option>Сејшели</option>
+                        <option>Словенија</option>
+                        <option>Србија</option>
+                        <option>Тајланд</option>
+                        <option>Турција</option>
+                        <option>Унгарија</option>
+                        <option>Филипини</option>
+                        <option>Франција</option>
+                        <option>Холандија</option>
+                        <option>Хрватска</option>
+                        <option>Црна Гора</option>
+                        <option>Чешка</option>
+                        <option>Швајцарија</option>
+                        <option>Шпанија</option>
+                        <option>Шри Ланка</option>
+                        <option>Шведска</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ДАТУМИ -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Од
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            До
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ТЕЛЕФОН И EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Телефон
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+389 7X XXX XXX"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="example@gmail.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ПОРАКА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дополнителна порака
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        placeholder="Дополнителни желби или барања...">
+                    </textarea>
+
+                </div>
+
+
+                <!-- КОПЧЕ -->
+
+                <button
+                    type="submit"
+                    class="confirm-reservation">
+
+                    ✈ &nbsp; Испрати резервација
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HERO ZA NAS
+    ====================================================== -->
+
+    <section class="hero-aboutUs">
+
+        <div class="contact-hero-aboutUs">
+
+            <p class="hero-small">
+                ДОЗНАЈ ПОВЕЌЕ ЗА НАС И ЗА НАШАТА КОМПАНИЈА
+            </p>
+
+            <h1>
+                Патувањето започнува со доверба
+            </h1>
+
+            <p class="hero-description">
+                Запознајте се со нас, со начинот на кој работиме
+                и посветеноста што ја вложуваме во секое патување.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ZA NAS -->
+
+<section class="about">
+
+    <div class="about-heading">
+
+        <div class="about-title">
+            <span>ЗА НАС</span>
+
+            <h1>
+                Повеќе од патување
+                <strong>Приказна која трае</strong>
+            </h1>
+        </div>
+
+        <p class="about-intro">
+            Запознајте ја нашата приказна, начинот на кој работиме
+            и посветеноста што ја вложуваме во секое ваше патување.
+        </p>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <!-- 01 -->
+        <div class="about-card">
+
+            <div class="about-number">
+                 <i class="bx bx-book-open"></i>
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Како започна нашата приказна?
+                </h2>
+
+                <p>
+                    Ние сме туристичка агенција основана во 2023 година,
+                    создадена со едноставна идеја – патувањето да биде
+                    полесно, поудобно и безгрижно за секој наш клиент.
+                    Веруваме дека организирањето на патување не треба
+                    да биде исполнето со пребарување, двоумење и
+                    непотребен стрес, туку да започне со добра идеја,
+                    вистински совет и доверба.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 02 -->
+        <div class="about-card">
+
+            <div class="about-number">
+                            <i class="bx bx-globe"></i>
+
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Што нудиме?
+                </h2>
+
+                <p>
+                    Во нашата понуда можете да најдете летувања,
+                    екскурзии, викенд патувања, градски одмори и
+                    различни туристички аранжмани до атрактивни
+                    дестинации. Внимателно ги избираме понудите
+                    со цел да пронајдете квалитетно сместување,
+                    организиран превоз и аранжман кој одговара
+                    на вашите желби и можности.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 03 -->
+        <div class="about-card">
+
+            <div class="about-number">
+            <i class="bx bx-user"></i>
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Секој патник е различен
+                </h2>
+
+                <p>
+                    За нас, секој клиент е различен, а со тоа и секое
+                    патување. Некој бара мирен одмор покрај море,
+                    некој сака да открива нови градови и култури,
+                    а некој едноставно сака неколку денови исполнети
+                    со убави места и нови искуства. Затоа се трудиме
+                    да ви помогнеме да го пронајдете патувањето
+                    кое навистина ви одговара.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 04 -->
+        <div class="about-card">
+
+            <div class="about-number">
+            <i class="bx bx-check-shield"></i>
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Секој детал е важен
+                </h2>
+
+                <p>
+                    Посебно внимание посветуваме на организацијата
+                    и деталите. Од изборот на дестинација и сместување,
+                    до информациите потребни пред патувањето, сакаме
+                    сè да биде јасно и навремено. Нашата цел е вие
+                    да можете да се опуштите и да размислувате за
+                    она што е најважно – каде ќе одите, што ќе видите
+                    и какви спомени ќе создадете.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 05 -->
+        <div class="about-card">
+
+            <div class="about-number">
+            <i class="bx bx-support"></i>
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Со вас од почеток до крај
+                </h2>
+
+                <p>
+                    Веруваме дека доброто патување не завршува со
+                    купениот аранжман. Затоа остануваме тука за нашите
+                    патници и пред и за време на патувањето, подготвени
+                    да помогнеме кога е потребно. Со професионален
+                    пристап, посветеност и искрена желба да ве услужиме,
+                    сакаме секое ваше патување со нас да биде пријатно
+                    искуство од самиот почеток до враќањето дома.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 06 -->
+        <div class="about-card about-card-special">
+
+            <div class="about-number">
+   <i class="bx bxs-plane-alt"></i>
+            </div>
+
+            <div class="about-card-content">
+
+                <h2>
+                    Нашата приказна продолжува
+                </h2>
+
+                <p>
+                    Нашата приказна можеби започна во 2023 година,
+                    но секое ново патување, секој задоволен клиент
+                    и секоја нова дестинација се дел од нејзиното
+                    продолжение. Нашата желба е да растеме заедно
+                    со вас и да бидеме агенција на која со задоволство
+                    ќе ѝ го доверите вашето следно патување.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ZAVRSNA PORAKA -->
+
+    <div class="about-bottom">
+
+
+
+        <p>
+            „Не продаваме само патувања.
+            Создаваме спомени што траат засекогаш.“
+        </p>
+
+        <span>
+            — Тимот на Патувај
+        </span>
+
+    </div>
+
+</section>
+
+
+
+   <!-- STATISTIKA -->
+<section class="stats-section">
+
+    <div class="stats-heading">
+        <span>ПАТУВАЊЕТО СО НАС</span>
+        <h2>Бројки што зборуваат<br><strong>за нашата приказна</strong></h2>
+    </div>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class='bx bxs-plane-alt'></i>
+            </div>
+
+            <h2>3+</h2>
+            <p>Години искуство</p>
+
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class='bx bxs-group'></i>
+            </div>
+
+            <h2>5.000+</h2>
+            <p>Задоволни патници</p>
+
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class='bx bx-world'></i>
+            </div>
+
+            <h2>50+</h2>
+            <p>Дестинации</p>
+
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class='bx bx-support'></i>
+            </div>
+
+            <h2>24/7</h2>
+            <p>Поддршка</p>
+
+            <span class="stat-line"></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+   <section class="passport-section">
+
+    <div class="passport-intro">
+        <span>ОТВОРИ ГО ПАСОШОТ</span>
+        <h2>Кој стои<br>зад патувањето?</h2>
+        <p>
+            Една мала идеја, многу километри и уште повеќе приказни
+        </p>
+    </div>
+
+    <div class="passport">
+
+        <div class="passport-cover">
+            <div class="passport-mark">✦</div>
+
+            <p>TRAVEL<br>PASSPORT</p>
+
+            <div class="passport-name">
+                OUR<br>STORY
+            </div>
+
+            <span class="passport-line"></span>
+        </div>
+
+        <div class="passport-page">
+
+            <div class="passport-top">
+                <span>ПАСОШ № 001</span>
+                <span><i class="bx bx-world"></i>  ПАТУВАЈ</span>
+            </div>
+
+            <div class="passport-content">
+
+                <div class="passport-photo">
+                    <img src="img/team.jpg" alt="Нашиот тим">
+                </div>
+
+                <div class="passport-info">
+                    <small>НАШАТА ИДЕЈА</small>
+
+                    <h3>
+                        Да го направиме<br>
+                        патувањето<br>
+                        полесно
+                    </h3>
+
+                    <p>
+                        Не сакаме да ти кажеме дека сме „најдобри“.
+                        Подобро е да те оставиме сам да го видиш тоа.
+                    </p>
+
+                    <p>
+                        За нас добро патување е кога немаш што
+                        да се грижиш, освен каде ќе одиш следно.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="passport-stamps">
+
+                <div class="stamp">
+                    <span>EXPLORE</span>
+                    <strong><i class="bx bx-infinite"></i></strong>
+                    <small>WITHOUT LIMITS</small>
+                </div>
+
+                <div class="stamp">
+                    <span>TRUSTED</span>
+                    <strong>✓</strong>
+                    <small>TRAVEL PARTNER</small>
+                </div>
+
+                <div class="stamp">
+                    <span>MEMORIES</span>
+                    <strong><i class="bx bxs-heart"></i></strong>
+                    <small>COLLECTED</small>
+                </div>
+
+            </div>
+
+            <div class="passport-footer">
+                <span>VALID FOR ADVENTURES</span>
+                <span>WHEREVER YOU GO</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         ZOSTO NIE
+    ====================================================== -->
+
+    <section class="why">
+
+        <div class="why-container">
+
+            <div class="why-image">
+
+            </div>
+
+
+            <div class="why-content">
+
+                <span class="why-small-title">
+                    ЗОШТО НИЕ?
+                </span>
+
+                <h2>
+                    Патувајте со сигурност,<br>
+                    уживајте без грижи
+                </h2>
+
+                <p class="why-intro">
+                    Ние се грижиме за деталите, вие само изберете ја
+                    вашата следна дестинација
+                </p>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <span class="why-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Добри и достапни понуди
+                            </h3>
+
+                            <p>
+                                Внимателно избрани понуди за различни
+                                видови патувања.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="why-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Професионална организација
+                            </h3>
+
+                            <p>
+                                Се грижиме секој детал од вашето патување
+                                да биде добро организиран.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="why-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Помош при изборот
+                            </h3>
+
+                            <p>
+                                Ќе ви помогнеме да ја изберете вистинската
+                                дестинација за вас.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="why-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Поддршка за нашите патници
+                            </h3>
+
+                            <p>
+                                Со вас сме од првата идеја до реализацијата
+                                на патувањето.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer id="kontakt">
+
+        <div class="container">
+
+            <div class="footer-wrapper">
+
+
+                <!-- LOGO / DESCRIPTION -->
+
+                <div class="footer-column footer-about">
+
+                    <h3>
+                        Патувај
+                    </h3>
+
+                    <p>
+                        Туристичка агенција за патувања
+                        низ Европа и пошироко.
+                        Го правиме секое патување
+                        со насмевка.
+                    </p>
+
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="#">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+
+                        <a href="#">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Брзи линкови
+                    </h3>
+
+                    <a href="index.html">
+                        Почетна
+                    </a>
+
+                    <a href="destinacii.html">
+                        Дестинации
+                    </a>
+
+                    <a href="zaNas.html">
+                        За нас
+                    </a>
+
+                    <a href="kontakt.html">
+                        Контакт
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Контакт
+                    </h3>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=ул.+Македонија+бр.+15,+Скопје"
+                       target="_blank">
+
+                        ул. Македонија бр. 15, Скопје
+
+                    </a>
+
+                    <a href="tel:+38922222456">
+                        +389 2 2222 456
+                    </a>
+
+                    <a href="mailto:info@patuvaj.mk">
+                        info@patuvaj.mk
+                    </a>
+
+                </div>
+
+
+
+                <!-- MAPA -->
+
+                <div class="footer-column footer-map">
+
+                    <h3>
+                        Каде се наоѓаме?
+                    </h3>
+
+                    <iframe
+                        src="https://www.google.com/maps?q=ул.+Македонија+бр.+15,+Скопје&output=embed"
+                        width="280"
+                        height="160"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Патувај. Сите права задржани.
+                </p>
+
+                <p>
+                    Студентски проект — Дизајн на страна
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+

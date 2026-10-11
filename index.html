@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Патувај - Туристичка агенција</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-dot"><i class="bx bx-world" ></i></span>
+            Патувај
+        </a>
+
+        <nav>
+            <a href="#pocetna">Почетна</a>
+            <a href="destinacii.html">Дестинации</a>
+            <a href="zaNas.html">За нас</a>
+            <a href="kontakt.html">Контакт</a>
+        </nav>
+
+        <!-- РЕЗЕРВИРАЈ -->
+
+        <a href="#rezervacija" class="reserve-button">
+            <strong><i class='bx bxs-calendar-event'></i></strong> &nbsp; Резервирај
+        </a>
+
+    </header>
+
+
+    <!-- POPUP -->
+
+    <div id="rezervacija" class="reservation-popup">
+        <label
+        class="background-blur"
+    ></label>
+
+        <div class="reservation-box">
+
+            <a href="#" class="close-reservation">
+                &times;
+            </a>
+
+
+            <div class="reservation-title">
+
+                <span>✈</span>
+
+                <h2>
+                    Резервирај го твоето патување
+                </h2>
+
+                <p>
+                    Пополнете ги податоците за вашата резервација.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <!-- ИМЕ И ЛИЦА -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Име и презиме
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Вашето име и презиме"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Број на лица
+                        </label>
+
+                        <input
+                            type="number"
+                            min="1"
+                            placeholder="Број на лица"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ДЕСТИНАЦИЈА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дестинација
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Изберете дестинација
+                        </option>
+
+                        <option>Австрија</option>
+                        <option>Босна и Херцеговина</option>
+                        <option>Бразил</option>
+                        <option>Бугарија</option>
+                        <option>Германија</option>
+                        <option>Грција</option>
+                        <option>Доминиканска Република</option>
+                        <option>Египет</option>
+                        <option>Еквадор</option>
+                         <option>Исланд</option>
+                        <option>Италија</option> 
+                        <option>Јапонија</option>
+                        <option>Кенија</option>
+                        <option>Кипар</option>
+                        <option>Костарика</option>
+                        <option>Малдиви</option>
+                        <option>Малта</option>
+                        <option>Мароко</option>
+                        <option>Маврициус</option>
+                        <option>Намбија</option>
+                        <option>Непал</option>
+                        <option>Норвешка</option>
+                        <option>Перу</option>
+                        <option>Сејшели</option>
+                        <option>Словенија</option>
+                        <option>Србија</option>
+                        <option>Тајланд</option>
+                        <option>Турција</option>
+                        <option>Унгарија</option>
+                        <option>Филипини</option>
+                        <option>Франција</option>
+                        <option>Холандија</option>
+                        <option>Хрватска</option>
+                        <option>Црна Гора</option>
+                        <option>Чешка</option>
+                        <option>Швајцарија</option>
+                        <option>Шпанија</option>
+                        <option>Шри Ланка</option>
+                        <option>Шведска</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ДАТУМИ -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Од
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            До
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ТЕЛЕФОН И EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Телефон
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+389 7X XXX XXX"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="example@gmail.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ПОРАКА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дополнителна порака
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        placeholder="Дополнителни желби или барања...">
+                    </textarea>
+
+                </div>
+
+
+                <!-- КОПЧЕ -->
+
+                <button
+                    type="submit"
+                    class="confirm-reservation">
+
+                    ✈ &nbsp; Испрати резервација
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+<!--HERO-->
+
+<section class="hero" id="pocetna">
+
+    <div class="hero-left">
+
+        <p class="hero-small">
+            ТВОЈАТА СЛЕДНА ПРИКАЗНА ПОЧНУВА ТУКА
+        </p>
+
+        <h1>
+            Откриј го светот
+            <span>со нас</span>
+        </h1>
+
+        <p class="hero-description">
+            Изберете дестинација, ние го средуваме останатото —
+            хотел, превоз и програма скроена за вас.
+            Патувања низ Европа и пошироко,
+            за секој вкус и буџет.
+        </p>
+
+
+
+    </div>
+
+</section>
+
+
+<!-- POPULARNI ARANZMANI -->
+
+<section class="popular" id="aranzmani">
+    <div class="container">
+
+        <div class="section-heading">
+            <p>ПОПУЛАРНИ ВО ОВАА СЕЗОНА</p>
+
+            <h2>Понуди што заминуваат наскоро</h2>
+
+            <span>
+                Селекција од аранжмани со најмногу резервации оваа недела.
+            </span>
+
+            <a href="destinacii.html">Види ги сите → </a>
+        </div>
+
+
+        <div class="package-container">
+
+
+            <!-- CARD 1 -->
+            <div class="package-card">
+
+                <div class="card-image card1">
+
+                    <div class="popular-badge">
+                        НАЈПОПУЛАРНО
+                    </div>
+
+                    <div class="package-top">
+                        <h3>Грција</h3>
+                        <p>Халкидики</p>
+                        <p>15.08 - 22.08</p>
+                    </div>
+
+                    <div class="package-overlay"></div>
+
+                    <div class="package-bottom">
+
+                        <div class="card-price">
+                            <span>од</span>
+                            <strong>399 €</strong>
+                            <small>по лице</small>
+                        </div>
+
+                        <a href="grcijaa.html" class="package-btn">
+                            Види понуда <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="package-card">
+
+                <div class="card-image card2">
+
+                    <div class="package-top">
+                        <h3>Турција</h3>
+                        <p>Анталија</p>
+                        <p>08.07 - 17.07</p>
+                    </div>
+
+                    <div class="package-overlay"></div>
+
+                    <div class="package-bottom">
+
+                        <div class="card-price">
+                            <span>од</span>
+                            <strong>700 €</strong>
+                            <small>по лице</small>
+                        </div>
+
+                        <a href="turcijaa.html" class="package-btn">
+                            Види понуда <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="package-card">
+
+                <div class="card-image card3">
+
+                    <div class="package-top">
+                        <h3>Италија</h3>
+                        <p>Амалфи</p>
+                        <p>23.08 - 29.08</p>
+                    </div>
+
+                    <div class="package-overlay"></div>
+
+                    <div class="package-bottom">
+
+                        <div class="card-price">
+                            <span>од</span>
+                            <strong>800 €</strong>
+                            <small>по лице</small>
+                        </div>
+
+                        <a href="italijaa.html" class="package-btn">
+                            Види понуда <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+            <div class="package-card">
+
+                <div class="card-image card4">
+ <div class="popular-badge">
+                        ПРЕПОРАЧАНО
+                    </div>
+                    <div class="package-top">
+                        <h3>Малта</h3>
+                        <p>Валета</p>
+                        <p>09.06 - 18.06</p>
+                    </div>
+
+                    <div class="package-overlay"></div>
+
+                    <div class="package-bottom">
+
+                        <div class="card-price">
+                            <span>од</span>
+                            <strong>599 €</strong>
+                            <small>по лице</small>
+                        </div>
+
+                        <a href="maltaa.html" class="package-btn">
+                            Види понуда <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!-- se sto vi e potrebno -->
+
+<section class="travel-guide">
+
+    <div class="guide-container">
+
+        <!-- Лева страна -->
+        <div class="guide-intro">
+
+            <span class="guide-label">ПАТУВАЈ БЕЗ ГРИЖИ</span>
+
+            <h2>
+                Сè што ви е потребно
+                <br>
+                за безгрижно патување
+            </h2>
+
+            <p>
+                Добрата подготовка го прави секое патување
+                полесно. Пронајдете практични информации и
+                корисни совети пред да тргнете на вашата
+                следна авантура.
+            </p>
+
+        </div>
+
+
+        <!-- Десна страна -->
+        <div class="guide-cards">
+
+            <div class="guide-card">
+
+                <div class="guide-icon"><strong><i class="bx bx-briefcase"></i></strong></div>
+
+                <div>
+                    <h3>Паметно пакување</h3>
+
+                    <p>
+                        Откријте што е важно да понесете
+                        зависно од дестинацијата и видот
+                        на вашето патување.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="guide-card">
+
+                <div class="guide-icon"><strong><i class='bx bx-clipboard'></i></strong></div>
+
+                <div>
+                    <h3>Подгответе ги документите</h3>
+
+                    <p>
+                        Информирајте се навреме за потребните
+                        документи, визи и услови за влез.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="guide-card">
+
+                <div class="guide-icon"><strong><i class='bx bx-detail'></i></strong></div>
+
+                <div>
+                    <h3>Патувајте информирано</h3>
+
+                    <p>
+                        Корисни информации за превоз, валута,
+                        локални правила и многу повеќе.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- RECENZII -->
+
+<section class="reviews" id="rev">
+
+    <div class="container">
+
+
+        <!-- NASLOV -->
+
+        <div class="review-title">
+
+            <p>
+                РЕЦЕНЗИИ
+            </p>
+
+            <h2>
+                Што велат нашите патници
+            </h2>
+
+        </div>
+
+
+
+        <!-- REVIEW CARDS -->
+
+        <div class="review-container">
+
+
+            <!-- 1. MARKO -->
+
+            <div class="review-card">
+
+                <div class="rev">
+
+                    <img
+                        src="img/men1.jpg"
+                        alt="Марко С.">
+
+                </div>
+
+                <span>
+                    Марко С.
+                </span>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <p id="dest">Бразил 14.08.2025</p>
+                <p class="desc">
+                    „Одлично искуство! Тимот беше професионален,
+                    љубезен и секогаш достапен. Престојот беше
+                    прекрасен и дефинитивно повторно би патувале
+                    со вас.“
+                </p>
+
+            </div>
+
+
+
+            <!-- 2. ANA -->
+
+            <div class="review-card">
+
+                <div class="rev">
+
+                    <img
+                        src="img/women1.jpg"
+                        alt="Ана Т.">
+
+                </div>
+
+                <span>
+                    Ана Т.
+                </span>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <p id="dest">Перу 23.07.2026</p>
+                <p class="desc">
+                    „Одличен тим! Дадоа достапност,
+                    а престојот беше прекрасен.
+                    Посетивме преубави места и пробавме одлична храна.
+                    Сигурно повторно ќе патуваме.“
+                </p>
+
+            </div>
+
+
+
+            <!-- 3. PETAR -->
+
+            <div class="review-card">
+
+                <div class="rev">
+
+                    <img
+                        src="img/men2.jpg"
+                        alt="Петар Р.">
+
+                </div>
+
+                <span>
+                    Петар Р.
+                </span>
+
+                <div class="stars">
+                    ★★★★☆
+                </div>
+                <p id="dest">Грција 01.05.2024</p>
+                <p class="desc">
+                    „Многу убаво искуство! Сè беше добро
+                    организирано, а престојот беше пријатен.
+                    Имаше неколку ситници, но генерално сме
+                    многу задоволни.“
+                </p>
+
+            </div>
+
+
+
+            <!-- 4. MARTA -->
+
+            <div class="review-card">
+
+                <div class="rev">
+
+                    <img
+                        src="img/women2.jpg"
+                        alt="Марта И.">
+
+                </div>
+
+                <span>
+                    Марта И.
+                </span>
+
+                <div class="stars">
+                    ★★★☆☆
+                </div>
+                <p id="dest">Црна Гора 08.11.2025</p>
+                <p class="desc">
+                    „Добро искуство и пријатен престој.
+                    Тимот беше коректен и достапен, но има
+                    простор за подобрување во организацијата
+                    и некои детали.“
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- KOPCE -->
+
+        <div class="con-rev">
+
+            <a
+                href="#reviewPopup"
+                class="review-button">
+
+                Оставете ваша рецензија!
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!--  REVIEW POPUP-->
+
+<div id="reviewPopup" class="review-popup">
+    <label
+        class="background-blur"
+    ></label>
+
+    <div class="review-popup-box">
+
+        <!-- X -->
+
+        <a href="#rev" class="close-review">
+            &times;
+        </a>
+
+
+        <!-- NASLOV -->
+
+        <div class="review-popup-title">
+
+            <span>
+                ★
+            </span>
+
+            <h2>
+                Оставете ваша рецензија
+            </h2>
+
+            <p>
+                Споделете го вашето искуство со нас.
+            </p>
+
+        </div>
+
+
+        <!-- FORMA -->
+
+        <form id="reviewForm">
+
+
+            <!-- IME I PREZIME -->
+
+            <div class="review-form-group">
+
+                <label>
+                    Име и презиме
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Вашето име и презиме"
+                    required>
+
+            </div>
+ <!-- OCENA -->
+
+            <div class="review-form-group">
+
+                <label>
+                    Дадете ваша оцена
+                </label>
+
+                <div class="star-rating">
+
+                    <input
+                        type="radio"
+                        name="rating"
+                        id="star5"
+                        value="5"
+                        required>
+
+                    <label for="star5">
+                        ★
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="rating"
+                        id="star4"
+                        value="4">
+
+                    <label for="star4">
+                        ★
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="rating"
+                        id="star3"
+                        value="3">
+
+                    <label for="star3">
+                        ★
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="rating"
+                        id="star2"
+                        value="2">
+
+                    <label for="star2">
+                        ★
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="rating"
+                        id="star1"
+                        value="1">
+
+                    <label for="star1">
+                        ★
+                    </label>
+
+                </div>
+
+            </div>
+            <div class="review-form-group">
+
+                <label>
+                    Дестинација
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Вашата дестинација"
+                    required>
+
+            </div>
+            <div class="review-form-group">
+
+                        <label>
+                            Датум
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+            <!-- OPIS / RECENZIJA -->
+
+            <div class="review-form-group">
+
+                <label>
+                    Ваша рецензија
+                </label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Напишете ја вашата рецензија..."
+                    required></textarea>
+
+            </div>
+
+
+           
+
+
+            <!-- ISPRATI -->
+
+            <button
+                type="submit"
+                class="send-review"
+                id="sendReview">
+
+                <span class="normal-text">
+                    ★ &nbsp; Испрати рецензија
+                </span>
+
+                <span class="done-text">
+                    ✓ &nbsp; Рецензијата е испратена!
+                </span>
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+    <!-- TAJNA PONUDA -->
+
+    <section class="secret-offer">
+
+        <div class="secret-offer-box">
+
+            <p class="secret-label">
+                 СПЕЦИЈАЛНО ЗА ТЕБЕ
+            </p>
+
+            <h2>
+               Имаме тајна понуда за тебе
+            </h2>
+
+            <p class="secret-text">
+                Откриј ја дестинацијата и дознај каде те
+                носи твојата следна авантура...
+            </p>
+
+
+            <!-- CHECKBOX -->
+
+            <input type="checkbox" id="secret-toggle">
+
+
+            <!-- KOPCE -->
+
+            <label for="secret-toggle" class="secret-button">
+            <span class="show-offer">
+                 <i class="bx bxs-lock" ></i> Откриј понуда
+            </span>
+
+                <span class="hide-offer">
+                 <i class="bx bxs-lock-open"></i> Сокриј понуда
+            </span>
+            </label>
+
+
+            <!-- SKRIENA PONUDA -->
+
+            <div class="secret-result">
+
+                <p>
+                    ТВОЈАТА СЛЕДНА ДЕСТИНАЦИЈА
+                </p>
+
+                <h3>
+                    Рим
+                </h3>
+
+                <span>
+                3 дена · 2 ноќевања
+            </span>
+             <p>15.09 - 17.09</p>
+
+                <div class="secret-price">
+                    219 € <small>по лице</small>
+                </div>
+
+                <a href="rome.html">
+                    Откриј го Рим →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+<!--  NEWSLETTER СЕКЦИЈА -->
+
+<section class="newsletter-section">
+
+    <div class="newsletter-box">
+
+        <!-- ЛЕВА СТРАНА - ТЕКСТ -->
+        <div class="newsletter-content">
+
+            <span class="newsletter-label">
+                БИДИ ВО ТЕК
+            </span>
+
+            <h2>
+                Не пропуштај ги
+                нашите новости
+            </h2>
+
+            <p>
+                Пријави се на нашиот билтен и
+                добивај корисни совети, идеи за
+                патувања и специјални понуди
+                директно на твојата е-пошта.
+            </p>
+
+        </div>
+
+
+        <!-- ДЕСНА СТРАНА - КОПЧЕ -->
+        <div class="newsletter-action">
+
+            <label
+                for="newsletter-popup"
+                class="newsletter-button"
+            >
+                Пријави се на билтенот
+                <span>→</span>
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEWSLETTER POPUP-->
+
+<input
+    type="checkbox"
+    id="newsletter-popup"
+    class="newsletter-toggle"
+>
+
+
+<div class="newsletter-popup">
+
+    <!-- КЛИК НАДВОР = ЗАТВОРИ -->
+    <label
+        for="newsletter-popup"
+        class="background-blur"
+    ></label>
+
+
+    <!-- POPUP -->
+    <div class="newsletter-modal">
+
+        <!-- X -->
+        <label
+            for="newsletter-popup"
+            class="newsletter-close"
+        >
+            &times;
+        </label>
+
+
+        <div class="modal-content">
+
+            <!-- ЅВЕЗДА -->
+            <div class="modal-icon">
+                <span><strong><i class="bx bxs-envelope"></i></strong></span>
+            </div>
+
+
+            <!-- НАСЛОВ -->
+            <h2>
+                Биди во тек со
+                нашите патувања
+            </h2>
+
+
+            <!-- ТЕКСТ -->
+            <p>
+                Внеси ја твојата е-пошта и добивај
+                инспирација за следното патување,
+                нови дестинации, корисни совети
+                и специјални понуди.
+            </p>
+
+
+            <!-- FORM -->
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Внеси ја твојата е-пошта"
+                    required
+                >
+
+                <button type="submit">
+                    Пријави ме
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <small>
+                Без спам. Само интересни информации
+                за патувања.
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+    
+
+
+
+<!--  FOOTER-->
+
+<footer id="kontakt">
+
+    <div class="container">
+
+        <div class="footer-wrapper">
+
+
+            <!-- LOGO / DESCRIPTION -->
+
+            <div class="footer-column footer-about">
+
+                <h3>
+                    Патувај
+                </h3>
+
+                <p>
+                    Туристичка агенција за патувања
+                    низ Европа и пошироко.
+                    Го правиме секое патување
+                    со насмевка.
+                </p>
+                <div class="social-icons">
+
+    <a href="#">
+        <i class='bx bxl-facebook'></i>
+    </a>
+
+    <a href="#">
+        <i class='bx bxl-instagram'></i>
+    </a>
+
+    <a href="#">
+        <i class='bx bxl-twitter'></i>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Брзи линкови
+                </h3>
+
+                <a href="#pocetna">
+                    Почетна
+                </a>
+
+                <a href="destinacii.html">
+                    Дестинации
+                </a>
+
+                <a href="zaNas.html">
+                    За нас
+                </a>
+
+                <a href="kontakt.html">
+                    Контакт
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Контакт
+                </h3>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=ул.+Македонија+бр.+15,+Скопје" target="_blank">
+                    ул. Македонија бр. 15, Скопје
+                </a>
+
+                <a href="tel:+38922222456">
+                    +389 2 2222 456
+                </a>
+
+                <a href="mailto:info@patuvaj.mk">
+                    info@patuvaj.mk
+                </a>
+
+            </div>
+<!-- MAPA -->
+
+<div class="footer-column footer-map">
+
+    <h3>
+        Каде се наоѓаме?
+    </h3>
+
+    <iframe
+        src="https://www.google.com/maps?q=ул.+Македонија+бр.+15,+Скопје&output=embed"
+        width="250"
+        height="160"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+</div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Патувај. Сите права задржани.
+            </p>
+
+            <p>
+                Студентски проект — Дизајн на страна
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- COOKIES -->
+
+<input type="checkbox" id="cookie-accept">
+
+<div class="cookie-banner">
+
+    <div class="cookie-content">
+
+        <div class="cookie-icon">
+            <i class='bx bx-cookie'></i>
+        </div>
+
+        <div class="cookie-text">
+
+            <h3>Користиме cookies</h3>
+
+            <p>
+                Оваа веб-страница користи cookies за да ви овозможи
+                подобро и попријатно корисничко искуство.
+            </p>
+
+        </div>
+
+        <div class="cookie-buttons">
+
+            <label for="cookie-accept" class="cookie-decline">
+                Одбиј
+            </label>
+
+
+            <label for="cookie-accept" class="cookie-accept">
+                Прифати
+            </label>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT ZA COOKIES -->
+<script>
+const cookieBanner = document.querySelector(".cookie-banner");
+const acceptCookie = document.querySelector(".accept-cookie");
+
+if (localStorage.cookie === "yes") {
+    cookieBanner.style.display = "none";
+}
+
+acceptCookie.onclick = function() {
+    localStorage.cookie = "yes";
+    cookieBanner.style.display = "none";
+};
+</script>
+
+
+</body>
+</html>

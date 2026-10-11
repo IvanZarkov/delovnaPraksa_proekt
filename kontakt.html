@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="mk">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet">
+
+    <title>Контакт</title>
+
+    <link rel="stylesheet" href="css/kontakt.css">
+
+</head>
+
+
+<body>
+
+
+<!--  NAVBAR -->
+
+<header class="navbar">
+    
+<a href="index.html" class="logo">
+            <span class="logo-dot"><i class="bx bx-world" ></i></span>
+            Патувај
+        </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Почетна
+        </a>
+
+        <a href="destinacii.html">
+            Дестинации
+        </a>
+
+        <a href="zaNas.html">
+            За нас
+        </a>
+
+        <a href="kontakt.html" class="active">
+            Контакт
+        </a>
+
+
+    </nav>
+    
+         <!-- РЕЗЕРВИРАЈ -->
+
+        <a href="#rezervacija" class="reserve-button">
+            <strong><i class='bx bxs-calendar-event'></i></strong> &nbsp; Резервирај
+        </a>
+
+</header>
+<!-- POPUP -->
+
+ <div id="rezervacija" class="reservation-popup">
+     <label class="newsletter-overlay"></label>
+        <div class="reservation-box">
+
+            <a href="#" class="close-reservation">
+                &times;
+            </a>
+
+
+            <div class="reservation-title">
+
+                <span>✈</span>
+
+                <h2>
+                    Резервирај го твоето патување
+                </h2>
+
+                <p>
+                    Пополнете ги податоците за вашата резервација.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <!-- ИМЕ И ЛИЦА -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Име и презиме
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Вашето име и презиме"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Број на лица
+                        </label>
+
+                        <input
+                            type="number"
+                            min="1"
+                            placeholder="Број на лица"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ДЕСТИНАЦИЈА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дестинација
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Изберете дестинација
+                        </option>
+
+                        <option>Австрија</option>
+                        <option>Босна и Херцеговина</option>
+                        <option>Бразил</option>
+                        <option>Бугарија</option>
+                        <option>Германија</option>
+                        <option>Грција</option>
+                        <option>Доминиканска Република</option>
+                        <option>Египет</option>
+                        <option>Еквадор</option>
+                         <option>Исланд</option>
+                        <option>Италија</option> 
+                        <option>Јапонија</option>
+                        <option>Кенија</option>
+                        <option>Кипар</option>
+                        <option>Костарика</option>
+                        <option>Малдиви</option>
+                        <option>Малта</option>
+                        <option>Мароко</option>
+                        <option>Маврициус</option>
+                        <option>Намбија</option>
+                        <option>Непал</option>
+                        <option>Норвешка</option>
+                        <option>Перу</option>
+                        <option>Сејшели</option>
+                        <option>Словенија</option>
+                        <option>Србија</option>
+                        <option>Тајланд</option>
+                        <option>Турција</option>
+                        <option>Унгарија</option>
+                        <option>Филипини</option>
+                        <option>Франција</option>
+                        <option>Холандија</option>
+                        <option>Хрватска</option>
+                        <option>Црна Гора</option>
+                        <option>Чешка</option>
+                        <option>Швајцарија</option>
+                        <option>Шпанија</option>
+                        <option>Шри Ланка</option>
+                        <option>Шведска</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ДАТУМИ -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Од
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            До
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ТЕЛЕФОН И EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Телефон
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+389 7X XXX XXX"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="example@gmail.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ПОРАКА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дополнителна порака
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        placeholder="Дополнителни желби или барања...">
+                    </textarea>
+
+                </div>
+
+
+                <!-- КОПЧЕ -->
+
+                <button
+                    type="submit"
+                    class="confirm-reservation">
+
+                    ✈ &nbsp; Испрати резервација
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+<!-- CONTACT HERO -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <p class="hero-small">
+            КОНТАКТИРАЈТЕ НÈ
+        </p>
+
+        <h1>
+            Вашето следно<br>
+            патување започнува <span> тука</span>
+           
+        </h1>
+
+        <p class="hero-description">
+            Имате прашање? Ние сме тука да ви помогнеме
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!--QUICK CONTACT-->
+
+<section class="contact-info">
+
+    <div class="contact-title">
+
+        <p>БИДЕТЕ ВО КОНТАКТ</p>
+
+        <h2>
+            Ние сме тука за вас
+        </h2>
+
+        <span>
+            Изберете како најмногу ви одговара да разговараме
+        </span>
+
+    </div>
+
+
+    <div class="contact-cards">
+
+        <!-- CARD 1 -->
+
+        <a href="tel:+38922222456" class="contact-card">
+
+            <div class="contact-icon">
+                <i class='bx bx-phone'></i>
+            </div>
+
+            <div>
+                <p class="card-label">ТЕЛЕФОН</p>
+
+                <h3>
+                    Јавете ни се
+                </h3>
+
+                <p class="card-info">
+                    +389 2 2222 456
+                </p>
+
+                <small>
+                    Пон – Пет · 09:00 – 17:00
+                </small>
+            </div>
+
+            <i class='bx bx-right-arrow-alt card-arrow'></i>
+
+        </a>
+
+
+        <!-- CARD 2 -->
+
+        <a href="mailto:info@patuvaj.mk" class="contact-card">
+
+            <div class="contact-icon">
+                <i class='bx bx-envelope'></i>
+            </div>
+
+            <div>
+                <p class="card-label">EMAIL</p>
+
+                <h3>
+                    Пишете ни
+                </h3>
+
+                <p class="card-info">
+                    info@patuvaj.mk
+                </p>
+
+                <small>
+                    Одговараме во најкраток рок.
+                </small>
+            </div>
+
+            <i class='bx bx-right-arrow-alt card-arrow'></i>
+
+        </a>
+
+
+        <!-- CARD 3 -->
+
+        <a href="#office" class="contact-card">
+
+            <div class="contact-icon">
+                <i class='bx bx-map'></i>
+            </div>
+
+            <div>
+                <p class="card-label">ЛОКАЦИЈА</p>
+
+                <h3>
+                    Посетете нè
+                </h3>
+
+                <p class="card-info">
+                    ул. Македонија бр. 15
+                </p>
+
+                <small>
+                    Скопје, Македонија
+                </small>
+            </div>
+
+            <i class='bx bx-right-arrow-alt card-arrow'></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- PLAN TOGETHER-->
+
+<section class="contact-intro">
+
+    <div class="intro-inner">
+
+        <!-- LEFT -->
+
+        <div class="intro-heading">
+
+            <p>ПЛАНИРАМЕ ЗАЕДНО</p>
+
+            <h2>
+                Не знаете која<br>
+                дестинација е за вас?
+            </h2>
+
+            <span>
+                Кажете ни што замислувате, а ние ќе ви помогнеме
+                да го пронајдете вистинското патување.
+                Од изборот на дестинација до последните детали,
+                го планираме патувањето заедно со вас.
+            </span>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="intro-features">
+
+            <div class="intro-feature">
+
+                <div class="feature-icon">
+                    <i class='bx bx-compass'></i>
+                </div>
+
+                <div class="feature-title">
+          
+                    <h3>Совети според<br>вашите желби</h3>
+                </div>
+
+                <p>
+                    Ви помагаме да го најдете
+                    она што навистина ви одговара
+                </p>
+
+            </div>
+
+
+            <div class="intro-feature">
+
+                <div class="feature-icon">
+                    <i class='bx bx-world'></i>
+                </div>
+
+                <div class="feature-title">
+           
+                    <h3>Проверени<br>дестинации</h3>
+                </div>
+
+                <p>
+                    Внимателно одбрани места
+                    за вашето следно патување
+                </p>
+
+            </div>
+
+
+            <div class="intro-feature">
+
+                <div class="feature-icon">
+                    <i class='bx bx-support'></i>
+                </div>
+
+                <div class="feature-title">
+                    
+                    <h3>Поддршка<br>кога ви треба</h3>
+                </div>
+
+                <p>
+                    Тука сме за вас пред
+                    и за време на патувањето
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT FORM-->
+
+<section class="contact-form-section" id="contact-form">
+
+    <div class="form-wrapper">
+
+        <!-- LEFT SIDE -->
+
+        <div class="form-text">
+
+            <p class="form-eyebrow">
+                ТУКА СМЕ ЗА ВАС
+            </p>
+
+            <h2>
+               Имате прашање? Пишете ни
+            </h2>
+
+            <span>
+               Без разлика дали имате прашање, ви требаат дополнителни информации или помош околу вашето патување,
+               или едноставно сакате да дознаете повеќе — слободно обратете ни се. Со задоволство ќе ви помогнеме и
+               ќе ви ги дадеме сите потребни информации и детали.
+            </span>
+
+
+            <div class="form-side-message">
+
+                
+
+                <p>
+                    Не знаете од каде да започнете?
+                </p>
+
+                <small>
+                   Нема проблем. Кажете ни што ве интересира, а ние ќе ве насочиме кон вистинската опција.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form class="contact-form">
+
+            <div class="form-top">
+                <div class="modal-icon">
+                <span><strong><i class="bx bxs-envelope-open"></i></strong></span>
+            </div>
+
+                <h2>
+                    Кажете ни што замислувате
+                </h2>
+
+                <p>
+                    Ќе ви одговориме во најбрз можен рок!
+                </p>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Име и презиме</label>
+
+                    <input
+                        type="text"
+                        placeholder="Вашето име"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        placeholder="Вашиот email"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Каде сакате да патувате?
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="На пример: Рим, Париз, Малдиви...">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Кажете ни нешто повеќе
+                </label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Какво патување замислувате?">
+                </textarea>
+
+            </div>
+
+
+            <button type="submit">
+
+                Испрати барање
+
+                <i class='bx bx-send'></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- OFFICE / MAP -->
+
+<section class="office-section" id="office">
+
+    <div class="office-wrapper">
+
+        <!-- MAP -->
+
+        <div class="office-map">
+
+            <iframe
+                src="https://www.google.com/maps?q=ул.+Македонија+бр.+15,+Скопје&output=embed"
+                width="100%"
+                height="420"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+
+        <!-- OFFICE INFO -->
+
+        <div class="office-content">
+
+            <h2>
+                Од Скопје до каде било
+            </h2>
+
+            <span class="office-description">
+                Нашата канцеларија е местото каде што можеме да
+                разговараме за вашите планови и да го направиме
+                првиот чекор кон следната дестинација.
+            </span>
+
+
+            <!-- DEPARTURE ROUTE -->
+
+            <div class="departure-route">
+
+                <div class="route-top">
+                    <span>DEPARTURE</span>
+                    <span>NEXT STOP</span>
+                </div>
+
+                <div class="route-line">
+
+                    <div class="route-point start"></div>
+
+                    <div class="route-path">
+                        <div class="route-plane">✈</div>
+                    </div>
+
+                    <div class="route-point end"></div>
+
+                </div>
+
+                <div class="route-locations">
+                    <strong>СКОПЈЕ</strong>
+                    <strong>КАДЕ БИЛО</strong>
+                </div>
+
+
+                <div class="route-message">
+
+                    <span class="route-small-title">
+                        Следниот чекор е твој
+                    </span>
+
+                    <p>
+                        Кажи ни каде сакаш да одиш.
+                        Ние ќе го најдеме патот.
+                    </p>
+
+                    <a href="#contact-form" class="route-button">
+                        Започни го патувањето
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--  FINAL CTA-->
+
+<section class="contact-final">
+
+    <div class="contact-final-overlay"></div>
+
+    <div class="contact-final-content">
+
+        <p>
+            УШТЕ СЕ ДВОУМИШ?
+        </p>
+
+        <h2>
+            Следната авантура<br>
+            можеби е поблиску отколку што мислиш
+        </h2>
+
+        <a href="destinacii.html">
+            Истражи ги дестинациите →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer id="kontakt">
+
+        <div class="container">
+
+            <div class="footer-wrapper">
+
+
+                <!-- LOGO / DESCRIPTION -->
+
+                <div class="footer-column footer-about">
+
+                    <h3>
+                        Патувај
+                    </h3>
+
+                    <p>
+                        Туристичка агенција за патувања
+                        низ Европа и пошироко.
+                        Го правиме секое патување
+                        со насмевка.
+                    </p>
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="#">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+
+                        <a href="#">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Брзи линкови
+                    </h3>
+
+                    <a href="index.html">
+                        Почетна
+                    </a>
+
+                    <a href="destinacii.html">
+                        Дестинации
+                    </a>
+
+                    <a href="zaNas.html">
+                        За нас
+                    </a>
+
+                    <a href="kontakt.html">
+                        Контакт
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Контакт
+                    </h3>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=ул.+Македонија+бр.+15,+Скопје" target="_blank">
+                        ул. Македонија бр. 15, Скопје
+                    </a>
+
+                    <a href="tel:+38922222456">
+                        +389 2 2222 456
+                    </a>
+
+                    <a href="mailto:info@patuvaj.mk">
+                        info@patuvaj.mk
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Патувај. Сите права задржани.
+                </p>
+
+                <p>
+                    Студентски проект — Дизајн на страна
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

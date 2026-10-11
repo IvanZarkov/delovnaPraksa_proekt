@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Дестинации</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/destinacii_in.css">
+</head>
+<body>
+<header class="navbar">
+
+
+    <a href="index.html" class="logo">
+            <span class="logo-dot"><i class="bx bx-world" ></i></span>
+            Патувај
+        </a>
+
+    <nav>
+        <a href="index.html">Почетна</a>
+        <a href="destinacii.html">Дестинации</a>
+        <a href="zaNas.html">За нас</a>
+        <a href="kontakt.html">Контакт</a>
+    </nav>
+
+    <a href="#rezervacija" class="reserve-button">
+        <strong><i class='bx bxs-calendar-event'></i></strong> &nbsp; Резервирај
+    </a>
+
+</header>
+
+
+<!-- POP UP -->
+<div id="rezervacija" class="reservation-popup">
+ <label class="background-blur"></label>
+        <div class="reservation-box">
+
+            <a href="#" class="close-reservation">
+                &times;
+            </a>
+
+
+            <div class="reservation-title">
+
+                <span>✈</span>
+
+                <h2>
+                    Резервирај го твоето патување
+                </h2>
+
+                <p>
+                    Пополнете ги податоците за вашата резервација.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <!-- ИМЕ И ЛИЦА -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Име и презиме
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Вашето име и презиме"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Број на лица
+                        </label>
+
+                        <input
+                            type="number"
+                            min="1"
+                            placeholder="Број на лица"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ДЕСТИНАЦИЈА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дестинација
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Изберете дестинација
+                        </option>
+
+                        <option>Австрија</option>
+                        <option>Босна и Херцеговина</option>
+                        <option>Бразил</option>
+                        <option>Бугарија</option>
+                        <option>Германија</option>
+                        <option>Грција</option>
+                        <option>Доминиканска Република</option>
+                        <option>Египет</option>
+                        <option>Еквадор</option>
+                         <option>Исланд</option>
+                        <option>Италија</option> 
+                        <option>Јапонија</option>
+                        <option>Кенија</option>
+                        <option>Кипар</option>
+                        <option>Костарика</option>
+                        <option>Малдиви</option>
+                        <option>Малта</option>
+                        <option>Мароко</option>
+                        <option>Маврициус</option>
+                        <option>Намбија</option>
+                        <option>Непал</option>
+                        <option>Норвешка</option>
+                        <option>Перу</option>
+                        <option>Сејшели</option>
+                        <option>Словенија</option>
+                        <option>Србија</option>
+                        <option>Тајланд</option>
+                        <option>Турција</option>
+                        <option>Унгарија</option>
+                        <option>Филипини</option>
+                        <option>Франција</option>
+                        <option>Холандија</option>
+                        <option>Хрватска</option>
+                        <option>Црна Гора</option>
+                        <option>Чешка</option>
+                        <option>Швајцарија</option>
+                        <option>Шпанија</option>
+                        <option>Шри Ланка</option>
+                        <option>Шведска</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ДАТУМИ -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Од
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            До
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ТЕЛЕФОН И EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Телефон
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+389 7X XXX XXX"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="example@gmail.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ПОРАКА -->
+
+                <div class="form-group">
+
+                    <label>
+                        Дополнителна порака
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        placeholder="Дополнителни желби или барања...">
+                    </textarea>
+
+                </div>
+
+
+                <!-- КОПЧЕ -->
+
+                <button
+                    type="submit"
+                    class="confirm-reservation">
+
+                    ✈ &nbsp; Испрати резервација
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- HERO -->
+<section class="hero" id="pocetna" style="background-image: url('img/destPic2.webp');">
+
+    <div class="hero-left">
+
+
+        <h1>
+            Зимски патувања
+
+        </h1>
+
+
+    </div>
+</section>
+
+
+<section class="offers">
+    <div class="offers-back">
+        <a href="destinacii.html">← Назад</a>
+    </div>
+    <div class="package-container">
+
+
+        <!-- CARD 1 -->
+        <div class="package-card">
+
+            <div class="card-image card1" style="background-image: url('img/austria.png'); background-size: cover;">
+
+                <div class="popular-badge">
+                    НАЈПОПУЛАРНО
+                </div>
+
+                <div class="package-top">
+                    <h3>Австрија</h3>
+                    <p>Скијање во Алпите</p>
+                    <p>01.02 - 07.02</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>499 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="avstrija.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="package-card">
+
+            <div class="card-image card2" style="background-image: url('img/switzerland.png'); background-size: cover;">
+
+                <div class="package-top">
+                    <h3>Швајцарија</h3>
+                    <p>Зимска магија во Алпите</p>
+                    <p>19.01 - 25.01</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>699 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="svajcarija.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="package-card">
+
+            <div class="card-image card3" style="background-image: url('img/italy.webp'); background-size: cover;">
+
+                <div class="package-top">
+                    <h3>Италија</h3>
+                    <p>Скијање во Доломитите</p>
+                    <p>17.12 - 24.12</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>549 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="Italyyy.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="package-card">
+
+            <div class="card-image card4" style="background-image: url('img/alpiFrancija.webp'); background-size: cover;">
+
+                <div class="package-top">
+                    <h3>Франција</h3>
+                    <p>Алпски ски центри</p>
+                    <p>05.01 - 11.01</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>749 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="francija.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="package-card">
+
+            <div class="card-image card5" style="background-image: url('img/serbia.png'); background-size: cover;">
+
+                <div class="package-top">
+                    <h3>Србија</h3>
+                    <p>Зимска авантура на Копаоник</p>
+                    <p>09.02 - 14.02</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>249 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="srbija.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+        <div class="package-card">
+
+            <div class="card-image card6" style="background-image: url('img/bosnia.png'); background-size: cover;">
+
+                <div class="package-top">
+                    <h3>Босна и Херцеговина</h3>
+                    <p>Скијање на Јахорина</p>
+                    <p>15.01 - 20.01</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>299 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="bosna.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 7 -->
+        <div class="package-card">
+
+            <div class="card-image card7" style="background-image: url('img/montenegro.webp'); background-size: cover; background-position: center;">
+
+                <div class="package-top">
+                    <h3>Црна Гора</h3>
+                    <p>Зимска приказна на Жабљак</p>
+                    <p>26.11 - 30.11</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>229 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="crna-gora.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 8 -->
+        <div class="package-card">
+
+            <div class="card-image card8" style="background-image: url('img/slovenia.png'); background-size: cover; background-position: center;">
+
+                <div class="package-top">
+                    <h3>Словенија</h3>
+                    <p>Зимска бајка на Блед</p>
+                    <p>06.12 - 12.12</p>
+                </div>
+
+                <div class="package-overlay"></div>
+
+                <div class="package-bottom">
+
+                    <div class="card-price">
+                        <span>од</span>
+                        <strong>379 €</strong>
+                        <small>по лице</small>
+                    </div>
+
+                    <a href="slovenija.html" class="package-btn">
+                        Види понуда <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+</section>
+
+
+
+
+
+
+
+<footer id="kontakt">
+
+    <div class="container">
+
+        <div class="footer-wrapper">
+
+
+            <!-- LOGO / DESCRIPTION -->
+
+            <div class="footer-column footer-about">
+
+                <h3>
+                    Патувај
+                </h3>
+
+                <p>
+                    Туристичка агенција за патувања
+                    низ Европа и пошироко.
+                    Го правиме секое патување
+                    со насмевка.
+                </p>
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="#">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a href="#">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Брзи линкови
+                </h3>
+
+                <a href="#pocetna">
+                    Почетна
+                </a>
+
+                <a href="destinacii.html">
+                    Дестинации
+                </a>
+
+                <a href="zaNas.html">
+                    За нас
+                </a>
+
+                <a href="kontakt.html">
+                    Контакт
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Контакт
+                </h3>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=ул.+Македонија+бр.+15,+Скопје" target="_blank">
+                    ул. Македонија бр. 15, Скопје
+                </a>
+
+                <a href="tel:+38922222456">
+                    +389 2 2222 456
+                </a>
+
+                <a href="mailto:info@patuvaj.mk">
+                    info@patuvaj.mk
+                </a>
+
+            </div>
+<!-- MAPA -->
+
+<div class="footer-column footer-map">
+
+    <h3>
+        Каде се наоѓаме?
+    </h3>
+
+    <iframe
+        src="https://www.google.com/maps?q=ул.+Македонија+бр.+15,+Скопје&output=embed"
+        width="280"
+        height="160"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+</div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Патувај. Сите права задржани.
+            </p>
+
+            <p>
+                Студентски проект — Дизајн на страна
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

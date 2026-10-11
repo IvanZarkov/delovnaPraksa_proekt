@@ -1,0 +1,1622 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #fff3e1;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    height: 94px;
+
+    background: #172a40;
+
+    border-bottom: 3px solid #c99a3c;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10.5%;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+ width: fit-content;
+    margin-right: 250px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+    color: #ffff;
+}
+
+
+.logo-dot {
+
+   color: #c99a3c;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+
+/* NAVIGATION */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+/*margin-left: 180px;*/
+    gap: 50px; 
+}
+
+
+.navbar nav a {
+ /* padding-left: 60px;    */
+  color: #d6d6d6;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+
+    color: #c99a3c;
+}
+
+
+/* RESERVE BUTTON */
+/* POPUP */
+
+.reservation-popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+.background-blur {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    backdrop-filter: blur(5px);
+
+    cursor: pointer;
+}
+
+
+/* OTVOREN POPUP */
+
+.reservation-popup:target {
+    display: flex;
+}
+
+
+/* KUTIJA */
+
+.reservation-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fffdf8;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+
+/* X */
+
+.close-reservation {
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+      background: #e6dbbf;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.close-reservation:hover{
+  background: #d2c5a5;
+      color: #111;
+}
+
+
+/* NASLOV */
+
+.reservation-title {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.reservation-title span {
+
+    display: inline-flex;
+    color: white;
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e5b63f;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.reservation-title h2 {
+
+    margin: 10px;
+
+    font-family: Georgia, serif;
+
+    color: #263238;
+
+    font-size: 27px;
+}
+
+.reservation-title p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* REDOVI */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* INPUT */
+
+.form-group {
+
+    margin-bottom: 16px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd3c2;
+
+    border-radius: 10px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* FOKUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #d5a832;
+
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+
+/* POTVRDI */
+
+.confirm-reservation {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e5b63f;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+
+.reserve-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    padding: 15px 26px;
+
+    background: #e5b63f;
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    border: 1px solid #d5a52f;
+
+    transition: all 0.25s ease;
+
+    white-space: nowrap;
+}
+
+
+/* HOVER */
+
+.reserve-button:hover {
+    background: #d3a52f;
+
+    color: #111;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* KLIK */
+
+.reserve-button:active {
+    transform: translateY(0);
+}
+
+.hero-aboutUs::before{
+      content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 47, 70, 0.216);
+    z-index: 0;
+}
+
+.hero-aboutUs{
+      /* border-bottom: 3px solid #c99a3c; */
+     justify-content: center;
+    text-align: center;
+    min-height: 500px;
+    background: url(../img/zaNas2.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+    display: flex;
+
+    align-items: center;
+
+    padding: 30px 10.5%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+.contact-hero-aboutUs{
+    width: 53%;
+    padding-left: 1%;
+    position: relative;
+    z-index: 2;
+}
+.hero-small {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 28px;
+}
+
+
+
+.contact-hero-aboutUs h1 {
+
+  font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+    color: #e6aa3b;
+
+    text-shadow: 0 3px 12px rgba(14, 14, 14, 0.622);
+}
+
+.hero-description {
+
+  max-width: 610px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 38px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* =====================================================
+   ABOUT US - BOOMBA DESIGN
+===================================================== */
+
+.about {
+    position: relative;
+
+    width: min(1200px, 90%);
+
+    margin: 65px auto;
+
+    padding: 20px 0 80px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.about-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 65px;
+
+    position: relative;
+}
+
+
+.about-title span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #f5c542;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+.about-title h1 {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: #162447;
+
+    font-size: 43px;
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+}
+
+
+.about-title h1 strong {
+    display: block;
+
+    color: #f5c542;
+
+    font-weight: 900;
+}
+
+
+.about-intro {
+    max-width: 370px;
+
+    margin: 0 0 5px;
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* жолта линија */
+
+.about-heading::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -30px;
+
+    width: 70px;
+    height: 4px;
+
+    border-radius: 20px;
+
+    background: #f5c542;
+}
+
+
+/* =====================================================
+   CONTENT GRID
+===================================================== */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.about-card {
+    position: relative;
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 35px 35px;
+
+    min-height: 250px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 10px 35px rgba(22, 36, 71, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* декоративна линија */
+
+.about-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 0;
+
+    background: #f5c542;
+
+    transition: height 0.35s ease;
+}
+
+
+.about-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(245, 197, 66, 0.4);
+
+    box-shadow:
+        0 20px 50px rgba(22, 36, 71, 0.12);
+}
+
+
+.about-card:hover::before {
+    height: 100%;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.about-number {
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: #162447;
+
+    color: #f5c542;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.about-card:hover .about-number {
+    
+
+    background: #f5c542;
+
+    color: #162447;
+}
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.about-card-content h2 {
+    margin: 2px 0 14px;
+
+    color: #162447;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+.about-card-content p {
+    margin: 0;
+
+    color: #6f6f6f;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   SPECIAL CARD
+===================================================== */
+
+.about-card-special {
+    background: #162447;
+
+    border-color: #162447;
+
+    box-shadow:
+        0 20px 50px rgba(22, 36, 71, 0.18);
+}
+
+
+.about-card-special .about-number {
+    background: #f5c542;
+     color: #162447;
+    
+}
+
+
+
+
+
+.about-card-special .about-card-content h2 {
+    color: #ffffff;
+}
+
+
+.about-card-special .about-card-content p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+.about-card-special:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+
+/* =====================================================
+   BOTTOM QUOTE
+===================================================== */
+
+.about-bottom {
+    position: relative;
+
+    margin-top: 60px;
+
+    padding: 45px 50px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: #f5c542;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(22, 36, 71, 0.12);
+}
+
+
+/* декоративен круг */
+
+.about-bottom::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid rgba(22, 36, 71, 0.12);
+
+    border-radius: 50%;
+
+    top: -150px;
+    left: -80px;
+}
+
+
+.about-bottom::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(22, 36, 71, 0.12);
+
+    border-radius: 50%;
+
+    bottom: -190px;
+    right: -80px;
+}
+
+
+
+
+
+.about-bottom p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto 12px;
+
+    max-width: 800px;
+
+    color: #162447;
+
+    font-size: clamp(20px, 3vw, 29px);
+
+    line-height: 1.4;
+
+    font-weight: 800;
+}
+
+
+.about-bottom span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(22, 36, 71, 0.65);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+/*PASSPORT DELCE*/
+.passport-section {
+    background: #17284d;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.passport-intro {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+.passport-intro span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #f5c542;
+}
+
+.passport-intro h2 {
+    color: #fff;
+    font-size: 37px;
+    line-height: 1;
+    margin: 10px 0 18px;
+}
+
+.passport-intro p {
+    color: rgba(255,255,255,.65);
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* PASSPORT */
+
+.passport {
+    max-width: 1050px;
+    min-height: 560px;
+    margin: auto;
+
+    display: flex;
+
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,.25));
+}
+
+
+/* COVER */
+
+.passport-cover {
+    width: 35%;
+    background: #e5b91f;
+
+    padding: 45px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 14px 0 0 14px;
+}
+
+.passport-mark {
+    width: 65px;
+    height: 65px;
+
+    border: 2px solid #17284d;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #17284d;
+    font-size: 28px;
+}
+
+.passport-cover > p {
+    color: #17284d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1.6;
+}
+
+.passport-name {
+    color: #17284d;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: .9;
+}
+
+.passport-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(23,40,77,.4);
+}
+
+
+/* INNER PAGE */
+
+.passport-page {
+    width: 65%;
+    background: #f7f0e4;
+
+    padding: 35px 45px;
+
+    border-radius: 0 14px 14px 0;
+
+    position: relative;
+}
+
+.passport-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #7b7d78;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #d8d2c6;
+
+    padding-bottom: 15px;
+}
+
+
+/* CONTENT */
+
+.passport-content {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.passport-photo {
+    height: 220px;
+    overflow: hidden;
+}
+
+.passport-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: grayscale(100%);
+}
+
+.passport-info small {
+         color: #f5c542;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.passport-info h3 {
+    color: #17284d;
+    font-size: 32px;
+    line-height: 1;
+    margin: 12px 0 20px;
+}
+
+.passport-info p {
+    color: #70756f;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+
+/* STAMPS */
+
+.passport-stamps {
+    display: flex;
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+.stamp {
+    width: 90px;
+    height: 90px;
+
+    border: 2px dashed #c6a72d;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-7deg);
+
+    color: #a58922;
+}
+
+.stamp:nth-child(2) {
+    transform: rotate(5deg);
+}
+
+.stamp:nth-child(3) {
+    transform: rotate(-3deg);
+}
+
+.stamp span {
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.stamp strong {
+    font-size: 25px;
+    line-height: 1;
+    margin: 3px 0;
+}
+
+.stamp small {
+    font-size: 5px;
+    letter-spacing: 1px;
+}
+
+
+
+
+.passport-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 45px;
+    right: 45px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #d8d2c6;
+
+    padding-top: 12px;
+
+    color: #999991;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+/* =========================
+   ZOSTO NIE
+========================= */
+
+.why {
+    padding: 90px 10%;
+    background: #f6f2ed;
+}
+
+.why-container {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* SLIKA */
+
+.why-image {
+    background-image: url(../img/zaNas-zosto.webp);
+    background-position: 15% center;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.why-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.why-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* CONTENT */
+
+.why-content {
+    color: #162b40;
+}
+
+.why-small-title {
+   font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #f5c542;
+}
+
+.why h2 {
+    margin: 5px 0 18px;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    color: #162b40;
+}
+
+.why-intro {
+    max-width: 480px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* LISTA */
+
+.why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+/* CHECK */
+
+.why-icon {
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5aa22;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* TEKST */
+
+.why-item h3 {
+    margin: 0 0 5px;
+
+    font-size: 17px;
+
+    color: #162b40;
+}
+
+.why-item p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #777;
+}
+
+
+
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+      border-top: 3px solid #c99a3c;
+    background: #172a40;
+
+    padding: 45px 0 12px;
+
+    color: white;
+    text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.footer-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 100px;
+
+    padding-bottom: 30px;
+}
+
+
+.footer-column {
+
+    width: 30%;
+}
+
+
+.footer-column h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #f1e7d5;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-column p {
+
+    color: #c5cbd2;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-column a {
+
+    display: block;
+
+    color: #c5cbd2;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+}
+
+
+.footer-column a:hover {
+
+    color: #c99a3c;
+}
+.footer-map {
+    width: 280px;
+}
+
+.footer-map iframe {
+    width: 280px;
+    height: 160px;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+
+    border-top: 1px solid #506074;
+
+    padding-top: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.footer-bottom p {
+
+    color: #7f8996;
+
+    font-size: 10px;
+}
+
+/* icons */
+.social-icons {
+    display: flex;
+    gap: 40px;
+
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e6aa3b;
+    border-radius: 50%;
+
+    color: #e6aa3b;
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e6aa3b;
+    color: #172c43;
+    transform: translateY(-4px);
+}
+
+
+/* =====================================================
+ STATISTICS
+===================================================== */
+
+.stats-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 5%;
+    /* margin: 70px 0; */
+      border-top: 3px solid #c99a3c;
+        border-bottom: 3px solid #c99a3c;
+    background: #162447;
+
+    overflow: hidden;
+}
+
+/* декоративни кругови */
+
+.stats-section::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    top: -220px;
+    left: -180px;
+}
+
+.stats-section::after {
+    content: "";
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(245, 197, 66, 0.12);
+
+    bottom: -300px;
+    right: -200px;
+}
+
+
+/* =====================================================
+   NASLOV
+===================================================== */
+
+.stats-heading {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.stats-heading span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #f5c542;
+}
+
+.stats-heading h2 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 37px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+.stats-heading h2 strong {
+    color: #f5c542;
+    font-weight: 800;
+    font-size: 37px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.stats {
+    position: relative;
+    z-index: 2;
+
+    width: min(1000px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =====================================================
+   STAT CARD
+===================================================== */
+
+.stat-card {
+    position: relative;
+
+    padding: 35px 25px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+
+
+/* hover */
+
+.stat-card:hover {
+    transform: translateY(-12px);
+
+    background: rgba(255, 255, 255, 0.11);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.stat-card:hover::before {
+    width: 100%;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(245, 197, 66, 0.12);
+
+    border: 1px solid rgba(245, 197, 66, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.stat-icon i {
+    font-size: 25px;
+
+    color: #f5c542;
+}
+
+.stat-card:hover .stat-icon {
+
+    background: rgba(245, 197, 66, 0.2);
+}
+
+
+/* =====================================================
+   BROJKI
+===================================================== */
+
+.stat-card h2 {
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* =====================================================
+   TEKST
+===================================================== */
+
+.stat-card p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.4px;
+}
+
+
+
+

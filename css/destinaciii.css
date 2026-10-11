@@ -1,0 +1,914 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #172a40;
+
+    color: white;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    height: 94px;
+
+    background: #172a40;
+
+    border-bottom: 3px solid #c99a3c;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10.5%;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    width: fit-content;
+    margin-right: 250px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.logo-dot {
+
+   color: #c99a3c;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+
+/* NAVIGATION */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+/*margin-left: 180px;*/
+    gap: 50px; 
+}
+
+
+.navbar nav a {
+ /* padding-left: 60px;    */
+  color: #d6d6d6;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+
+    color: #c99a3c;
+}
+
+
+/* RESERVE BUTTON */
+/* POPUP */
+
+.reservation-popup {
+    position: fixed;
+
+    inset: 0;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+.background-blur {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    backdrop-filter: blur(5px);
+
+    cursor: pointer;
+}
+
+
+/* OTVOREN POPUP */
+
+.reservation-popup:target {
+    display: flex;
+}
+
+
+/* KUTIJA */
+
+.reservation-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fffdf8;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+
+/* X */
+
+.close-reservation {
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+     background: #e6dbbf;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.close-reservation:hover{
+      background: #d2c5a5;
+      color: #111;
+}
+
+
+/* NASLOV */
+
+.reservation-title {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.reservation-title span {
+
+    display: inline-flex;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e5b63f;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.reservation-title h2 {
+
+    margin: 10px;
+
+    font-family: Georgia, serif;
+
+    color: #263238;
+
+    font-size: 27px;
+}
+
+.reservation-title p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* REDOVI */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* INPUT */
+
+.form-group {
+
+    margin-bottom: 16px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd3c2;
+
+    border-radius: 10px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* FOKUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #d5a832;
+
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+
+/* POTVRDI */
+
+.confirm-reservation {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e5b63f;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+
+.reserve-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    padding: 15px 26px;
+
+    background: #e5b63f;
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    border: 1px solid #d5a52f;
+
+    transition: all 0.25s ease;
+
+    white-space: nowrap;
+}
+
+
+/* HOVER */
+
+.reserve-button:hover {
+    background: #d3a52f;
+
+    color: #111;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* KLIK */
+
+.reserve-button:active {
+    transform: translateY(0);
+}
+ 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 47, 70, 0.316);
+    z-index: 0;
+}
+.hero {
+      /* border-bottom: 3px solid #c99a3c; */
+    justify-content: center;
+
+    min-height: 500px;
+   background-image: url('../img/f1c46a9783ff0aa8b16e4cd8a0b1bd35.png');
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    display: flex;
+
+    align-items: center;
+
+    padding: 30px 10.5%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+/* LEFT */
+
+.hero-left {
+
+    width: 53%;
+    padding-left: 1%;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-small {
+
+   color: #ffffff;
+    text-align: center;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 28px;
+}
+
+
+.hero h1 {
+
+  font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+    color: #ffffff;
+
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+
+.hero h1 span {
+
+    color: #c99a3c;
+
+    font-style: italic;
+}
+
+
+.hero-description {
+
+  max-width: 610px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 38px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destinations {
+    background-color: #fff3e1;
+    padding: 80px 8%;
+    position: relative;
+}
+/* =========================
+   BACK BUTTON
+========================= */
+
+.destinations-back {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+}
+
+.destinations-back a {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #172a40;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.destinations-back a:hover {
+    /* color: #c9362b; */
+  color: #c7911c;
+    transform: translateX(-5px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.destinations-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.destinations-title h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    color: #172a40;
+    margin: 0 0 12px;
+}
+
+.destinations-title p {
+    color: #6f6f6f;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =========================
+   CARDS GRID
+========================= */
+
+.destinations-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   DESTINATION CARD
+========================= */
+
+.destination-card {
+    height: 270px;
+
+    position: relative;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+
+box-shadow: 0 15px 35px rgba(79, 62, 39, 0.604);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* =========================
+   CARD IMAGES
+========================= */
+
+.card-1 {
+    background-image: url("../img/destPic1.webp");
+}
+
+.card-2 {
+    background-image: url("../img/destPic6.webp");
+}
+
+.card-3 {
+    background-image: url("../img/destPic4.avif");
+}
+
+.card-4 {
+    background-image: url("../img/destPic5.jpg");
+}
+
+.card-5 {
+    background-image: url("../img/destPic3.webp");
+}
+
+.card-6 {
+    background-image: url("../img/destPic2.webp");
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.destination-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(10, 25, 40, 0.88),
+        rgba(10, 25, 40, 0.08)
+    );
+
+    transition: background 0.4s ease;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    color: white;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card-overlay h2 {
+    color: #d2a23c;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 0 0 5px;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   DESTINATION NAME
+========================= */
+
+.card-overlay h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    margin: 0;
+
+    color: white;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   CARD LINK
+========================= */
+
+.card-overlay a {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================
+   LINK HOVER
+========================= */
+
+.card-overlay a:hover {
+    color: #d2a23c;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.destination-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(210, 162, 60, 0.55);
+
+    box-shadow:
+        0 18px 40px rgba(23, 42, 64, 0.25);
+}
+
+
+/* =========================
+   OVERLAY HOVER
+========================= */
+
+.destination-card:hover::before {
+    background: linear-gradient(
+        to top,
+        rgba(10, 25, 40, 0.92),
+        rgba(10, 25, 40, 0.15)
+    );
+}
+
+
+
+/*FOOTER*/
+footer {
+        border-top: 3px solid #c99a3c;
+    background: #172a40;
+
+    padding: 45px 0 12px;
+
+    color: white;
+    text-align: center;
+}
+
+
+.footer-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 100px;
+
+    padding-bottom: 30px;
+}
+
+
+.footer-column {
+
+    width: 30%;
+}
+
+
+.footer-column h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #f1e7d5;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-column p {
+
+    color: #c5cbd2;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-column a {
+
+    display: block;
+
+    color: #c5cbd2;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+}
+
+
+.footer-column a:hover {
+
+    color: #c99a3c;
+}
+.footer-map {
+    width: 280px;
+}
+
+.footer-map iframe {
+    width: 280px;
+    height: 160px;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+
+    border-top: 1px solid #506074;
+
+    padding-top: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.footer-bottom p {
+
+    color: #7f8996;
+
+    font-size: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 40px;
+    
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+margin-left: 5px;
+margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e6aa3b;
+    border-radius: 50%;
+
+    color: #e6aa3b;
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e6aa3b;
+    color: #172c43;
+    transform: translateY(-4px);
+}
+
+

@@ -1,0 +1,1611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #f7f2e8;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    height: 94px;
+
+    background: #172a40;
+
+    border-bottom: 3px solid #c99a3c;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10.5%;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+
+     width: fit-content;
+    margin-right: 250px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+    color: white;
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+
+.logo-dot {
+
+  color: #c99a3c;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+
+/* NAVIGATION */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+    gap: 50px; 
+}
+
+
+.navbar nav a {
+  color: #d6d6d6;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+
+    color: #c99a3c;
+}
+
+
+/* RESERVE BUTTON */
+
+.reserve-button {
+padding-right: -90px;
+
+    background: #c99a3c;
+
+    color: #172a40;
+
+    text-decoration: none;
+
+    padding: 15px 26px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+    
+}
+
+
+.reserve-button:hover {
+
+    background: #dfb154;
+
+}
+
+
+/* NASLOV */
+
+.title {
+    text-align: center;
+    padding: 65px 20px 40px;
+}
+
+.title p,
+.label {
+    color: #d5a52f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.title h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    margin: 5px 0 12px;
+}
+
+.title span {
+    color: #666;
+}
+
+
+/* HOTEL */
+
+.hotel {
+    width: 90%;
+    max-width: 1100px;
+    max-height: 1000px;
+    margin: auto;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* KUTIJA */
+
+.reservation-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fffdf8;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+
+/* X */
+
+.close-reservation {
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #eee5d5;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* NASLOV */
+
+.reservation-title {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.reservation-title span {
+
+    display: inline-flex;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e5b63f;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.reservation-title h2 {
+
+    margin: 10px;
+
+    font-family: Georgia, serif;
+
+    color: #263238;
+
+    font-size: 27px;
+}
+
+.reservation-title p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* REDOVI */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* INPUT */
+
+.form-group {
+
+    margin-bottom: 16px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd3c2;
+
+    border-radius: 10px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* FOKUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #d5a832;
+
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+
+/* POTVRDI */
+
+.confirm-reservation {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e5b63f;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+
+.reserve-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    padding: 15px 26px;
+
+    background: #e5b63f;
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    border: 1px solid #d5a52f;
+
+    transition: all 0.25s ease;
+
+    white-space: nowrap;
+}
+
+
+/* HOVER */
+
+.reserve-button:hover {
+    background: #d3a52f;
+
+    color: #111;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* KLIK */
+
+.reserve-button:active {
+    transform: translateY(0);
+}
+
+.hotel-image {
+    width: 48%;
+    min-height: 500px;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* СЛИКИ */
+
+.greece {
+    background-image: url("grcija.jpg");
+}
+
+.turkey {
+    background-image: url("turska.jpg");
+}
+
+.italy {
+    background-image: url("italija.jpg");
+}
+
+.malta {
+    background-image: url("malta.jpg");
+}
+.hotel-image.malta ,
+.hotel-image.greece,
+.hotel-image.turkey,
+.hotel-image.italy,
+.hotel-image.spain,
+.hotel-image.croatia,
+.hotel-image.egypt,
+.hotel-image.cyprus,
+.hotel-image.srilanka,
+.hotel-image.kenya,
+.hotel-image.namibia,
+.hotel-image.peru,
+.hotel-image.philippines,
+.hotel-image.brazil,
+.hotel-image.ecuador,
+.hotel-image.nepal,
+.hotel-image.maldives,
+.hotel-image.bali,
+.hotel-image.seychelles,
+.hotel-image.mauritius,
+.hotel-image.zanzibar,
+.hotel-image.thailand,
+.hotel-image.dominican,
+.hotel-image.costarica,
+.hotel-image.netherlands ,
+.hotel-image.germany,
+.hotel-image.norway,
+.hotel-image.sweden,
+.hotel-image.iceland,
+.hotel-image.morocco,
+.hotel-image.thailand,
+.hotel-image.japan,
+.hotel-image.serbia,
+.hotel-image.bulgaria,
+.hotel-image.greece,
+.hotel-image.hungary,
+.hotel-image.austria,
+.hotel-image.czech,
+.hotel-image.italy,
+.hotel-image.croatia,
+.hotel-image.austria,
+.hotel-image.switzerland,
+.hotel-image.italy,
+.hotel-image.france,
+.hotel-image.serbia,
+.hotel-image.bosnia,
+.hotel-image.montenegro,
+.hotel-image.slovenia{
+    width: 525px;
+    /*height: 600px;*/
+    overflow: hidden;
+}
+
+.hotel-image.malta img,
+.hotel-image.greece img,
+.hotel-image.turkey img,
+.hotel-image.italy img,
+.hotel-image.spain img,
+.hotel-image.croatia img,
+.hotel-image.egypt img,
+.hotel-image.cyprus img,
+.hotel-image.srilanka img,
+.hotel-image.kenya img,
+.hotel-image.namibia img,
+.hotel-image.peru img,
+.hotel-image.philippines img,
+.hotel-image.brazil img,
+.hotel-image.ecuador img,
+.hotel-image.nepal img,
+.hotel-image.maldives img,
+.hotel-image.bali img,
+.hotel-image.seychelles img,
+.hotel-image.mauritius img,
+.hotel-image.zanzibar img,
+.hotel-image.thailand img,
+.hotel-image.dominican img,
+.hotel-image.costarica img,
+.hotel-image.netherlands img,
+.hotel-image.germany img,
+.hotel-image.norway img,
+.hotel-image.sweden img,
+.hotel-image.iceland img,
+.hotel-image.morocco img,
+.hotel-image.thailand img,
+.hotel-image.japan img,
+.hotel-image.serbia img,
+.hotel-image.bulgaria img,
+.hotel-image.greece img,
+.hotel-image.hungary img,
+.hotel-image.austria img,
+.hotel-image.czech img,
+.hotel-image.italy img,
+.hotel-image.croatia img,
+.hotel-image.austria img,
+.hotel-image.switzerland img,
+.hotel-image.italy img,
+.hotel-image.france img,
+.hotel-image.serbia img,
+.hotel-image.bosnia img,
+.hotel-image.montenegro img,
+.hotel-image.slovenia img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* HOTEL INFO */
+
+.hotel-info {
+    width: 52%;
+    padding: 45px;
+}
+
+.hotel-info h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin: 10px 0;
+}
+.hotel-info h2 span{
+    color: darkgoldenrod;
+}
+
+.hotel-info > p {
+    margin: -3px;
+    padding-bottom: 15px;
+    color: #666;
+}
+
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.details div {
+    padding: 15px;
+
+    background: #f7f2e8;
+
+    border-radius: 10px;
+}
+
+.details strong {
+    margin-right: 7px;
+}
+
+.description {
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* CENA */
+
+.price {
+    margin-top: 25px;
+
+    color: #d94b3d;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.price span {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    background: #172b43;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s background-color ease;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #c99a3c;
+}
+
+
+
+
+/* =========================
+   VKLUCHENO
+========================= */
+
+.included {
+    padding: 55px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.included h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #172c43;
+}
+
+.included-grid {
+    max-width: 900px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Golemi karticki */
+
+.included-box {
+        background: #f7f2e8;
+
+    padding: 35px 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(23, 44, 67, 0.2);
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* Naslov */
+
+.included-box h3 {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    color: #172c43;
+    font-size: 22px;
+}
+
+/* Samo X i stikilrano */
+
+.check,
+.cross {
+    color: #172c43;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+/* Lista */
+
+.included-box ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.included-box li {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    padding: 8px 0;
+    /* border-bottom: 1px solid #d3a52f; */
+}
+
+.included-box li:last-child {
+    border-bottom: none;
+}
+
+
+
+/* MESTA */
+
+.places {
+    margin-top: 70px;
+    padding: 60px 10%;
+    background: white;
+    text-align: center;
+}
+.places h2{
+     font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.place-list {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.place-list div {
+    padding: 25px;
+
+    text-align: left;
+
+    background: #f7f2e8;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.place-list div:hover{
+    transform: translateY(-5px);
+      background: #f9f6f1;
+    
+}
+
+.place-list h3 {
+    margin-bottom: 10px;
+}
+.place-list div h3 strong i{
+    color: #d5a52f;
+}
+
+.place-list p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* REZERVACIJA */
+
+.reservation {
+    padding: 90px 20px;
+
+    text-align: center;
+color: #666;
+;
+    /* background: #e5b63f; */
+
+    color: white;
+}
+
+.reservation h2 {
+    color: black;
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+.reservation p {
+    margin: 15px 0 25px;
+    color: black;
+}
+
+.reservation a {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #c99a3c;
+    color: #333;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+}
+
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+        border-top: 3px solid #c99a3c;
+    background: #172a40;
+
+    padding: 45px 0 12px;
+
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0px auto;
+}
+
+.footer-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 100px;
+
+    padding-bottom: 30px;
+}
+
+
+.footer-column {
+
+    width: 30%;
+}
+
+
+.footer-column h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #f1e7d5;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-column p {
+
+    color: #c5cbd2;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-column a {
+
+    display: block;
+
+    color: #c5cbd2;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+}
+
+
+.footer-column a:hover {
+
+    color: #c99a3c;
+}
+.footer-map {
+    width: 280px;
+}
+
+.footer-map iframe {
+    width: 280px;
+    height: 160px;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+
+
+/* BOTTOM */
+
+.footer-bottom {
+
+    border-top: 1px solid #506074;
+
+    padding-top: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.footer-bottom p {
+
+    color: #7f8996;
+
+    font-size: 10px;
+}
+
+
+
+
+/* icons */
+.social-icons {
+    display: flex;
+    gap: 40px;
+
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e6aa3b;
+    border-radius: 50%;
+
+    color: #e6aa3b;
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e6aa3b;
+    color: #172c43;
+    transform: translateY(-4px);
+}
+
+
+#rezervacija-toggle {
+    display: none;
+}
+
+.background-blur {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    backdrop-filter: blur(5px);
+
+    cursor: pointer;
+}
+/* ПОЗАДИНА НА POPUP */
+
+.reservation-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    padding: 20px;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    z-index: 9999;
+}
+
+
+/* ОТВОРАЊЕ НА POPUP */
+
+#rezervacija-toggle:checked ~ .reservation-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* POPUP */
+
+.reservation-popup {
+    width: 100%;
+    max-width: 470px;
+
+    max-height: 600px;
+    overflow-y: auto;
+
+        background: #fffdf8;
+
+    padding: 45px 50px;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(25px);
+
+    transition: transform 0.3s ease;
+}
+
+
+#rezervacija-toggle:checked
+~ .reservation-overlay
+.reservation-popup {
+
+    transform: translateY(0);
+}
+/* КРУГЧЕ СО АВИОН */
+
+.reservation-icon {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    color: white;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    background: #e5b63f;
+    border-radius: 50%;
+    font-size: 21px;
+
+    top: 28px;
+}
+
+
+/* X КОПЧЕ */
+.close-popup {
+
+    position: absolute;
+
+    top: 10px;
+    right: 18px;
+
+    font-size: 25px;
+
+    color: #777;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    /* samo dodadeno za pozadina */
+    width: 40px;
+    height: 40px;
+
+      background: #e6dbbf;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.close-popup:hover {
+      background: #d2c5a5;
+      color: #111;
+}
+
+
+/* НАСЛОВ */
+
+.reservation-popup h2 {
+    text-align: center;
+    margin: 50px 0 10px;
+
+    font-size: 26px;
+
+    color: #222;
+}
+
+
+/* ТЕКСТ ПОД НАСЛОВ */
+
+.popup-subtitle {
+    text-align: center;
+    margin: 0 0 30px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* POLINJA */
+
+.form-group {
+
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+
+    border-color: #f2b632;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(242, 182, 50, 0.12);
+}
+
+
+/* DATUM OD + DATUM DO */
+
+.form-row {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+
+.form-row .form-group {
+
+    width: 50%;
+}
+
+
+/* POTVRDI */
+
+.confirm-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f2b632;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.confirm-button:hover {
+
+    background-color: #c99a3c;
+
+    transform: translateY(-1px);
+}
+
+/*PROGRAMA*/
+.itinerary {
+    padding: 70px 8%;
+        background: #f7f2e8;
+}
+
+.itinerary > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.itinerary >h2 i{
+    color: #d5a52f;
+}
+
+/* ЕДЕН ГОЛЕМ BUBBLE */
+.itinerary-list {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 15px 35px;
+    border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 10, 0.4)
+}
+
+/* САМО РЕДОВИ ВНАТРЕ */
+.itinerary-day {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 25px 5px;
+}
+
+/* Divider меѓу деновите */
+.itinerary-day:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+}
+
+.itinerary-day > span {
+    min-width: 70px;
+    color: #172b3f;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.itinerary-day h3 {
+    margin: 0 0 8px;
+    font-size: 23px;
+    color: #172b3f;
+}
+
+.itinerary-day p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+
+
+.offers-back {
+    width: min(1400px, 92%);
+    margin: 25px auto 5px;
+}
+
+.offers-back a {
+    position: absolute;
+    top: 260px;
+    left: 150px;
+    display: inline-flex;
+    align-items: center;
+    color: #172a40;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+.offers-back a:hover {
+    /* color: #c9362b; */
+      color: #c7911c;
+     transform: translateX(-5px);
+}
+
+/* =====================================================
+   INCLUDED
+===================================================== */
+
+.included {
+    padding: 60px 8%;
+    text-align: center;
+    background: white;
+}
+
+
+/* =====================================================
+   NASLOV
+===================================================== */
+
+.included h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #172c43;
+    margin-bottom: 35px;
+}
+
+.included h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #c99a3c;
+    margin: 15px auto 0;
+}
+
+
+/* =====================================================
+   KARTICKI
+===================================================== */
+
+.included-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.included-box {
+    background: #f7f2e8;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e5dfd2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.included-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    background: #fffaf0;
+}
+
+
+/* =====================================================
+   NASLOV NA KARTICKA
+===================================================== */
+
+.included-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 21px;
+    color: #172c43;
+}
+
+
+/* =====================================================
+   GLAVNI IKONI
+===================================================== */
+
+.check,
+.cross {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+
+    transition: 0.3s ease;
+}
+
+.check {
+    background: #172c43;
+    color: white;
+}
+
+.cross {
+    background: #b7433a;
+    color: white;
+}
+
+
+/* =====================================================
+   HOVER NA IKONI
+===================================================== */
+
+.included-box:hover .check {
+    background: #c99a3c;
+    color: #172c43;
+    transform: scale(1.1);
+}
+
+.included-box:hover .cross {
+    background: #963b35;
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.included-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.included-box li {
+    position: relative;
+
+    padding-left: 35px;
+    margin-bottom: 10px;
+
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+
+    transition: 0.2s ease;
+}
+
+
+/* =====================================================
+   CHECK PRED TEKST
+===================================================== */
+
+.included-box li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #eee3c9;
+    color: #a77b27;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   X PRED TEKST
+===================================================== */
+
+.included-box:nth-child(2) li::before {
+    content: "×";
+
+    background: #f1d9d7;
+    color: #b7433a;
+
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* =====================================================
+   PLACES
+===================================================== */
+
+.places {
+    margin-top: 50px;
+    padding: 50px 10%;
+    background: white;
+    text-align: center;
+}
+
+.places h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #172c43;
+}
+
+
+/* =====================================================
+   PLACE LIST
+===================================================== */
+
+.place-list {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.place-list div {
+    padding: 22px;
+    text-align: left;
+
+    background: #f7f2e8;
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER NA PLACES
+===================================================== */
+
+.place-list div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background: #fffaf0;
+}
+
+.place-list h3 {
+    margin-bottom: 10px;
+    color: #172c43;
+}
+
+.place-list p {
+    color: #666;
+    line-height: 1.5;
+}
